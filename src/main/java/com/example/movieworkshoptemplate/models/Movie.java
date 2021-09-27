@@ -60,7 +60,7 @@ public class Movie {
         this.popularity = popularity;
     }
 
-    public boolean getAwards() {
+    public boolean hasAwards() {
         return awards;
     }
 

@@ -1,11 +1,14 @@
 package com.example.movieworkshoptemplate.controllers;
 
+import com.example.movieworkshoptemplate.services.MovieService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MovieController {
+    MovieService movieService = new MovieService();
+
     //Controller methods
     @GetMapping("/")
     public String index(){
@@ -14,7 +17,7 @@ public class MovieController {
 
     @GetMapping("/getFirst")
     public String getFirst(){
-        return "temp";
+        return movieService.getFirstServ();
     }
 
     @GetMapping("/getRandom")
@@ -41,5 +44,4 @@ public class MovieController {
     public String filterLongestByGenre(@RequestParam String g1, String g2){
         return "temp";
     }
-
 }

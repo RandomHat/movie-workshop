@@ -25,6 +25,8 @@ public class MovieDataRepository {
     }
 
     private ArrayList<Movie> loadMovies(String path){
+        // Reads a file and fills the array with Movie objects
+
         File file = new File(path);
         ArrayList<Movie> movies = new ArrayList<>();
         try {
@@ -51,9 +53,11 @@ public class MovieDataRepository {
         boolean awards = split[5].equals("Yes");
 
         // Initialize and return object
-        Movie mov = new Movie(year, length, title, subject, popularity, awards);
-        return mov;
+        return new Movie(year, length, title, subject, popularity, awards);
     }
+
+    /*
+    TestKode til klassen
 
     public static void main(String[] args) {
         MovieDataRepository repo = MovieDataRepository.getMovieDataRepository();
@@ -61,4 +65,5 @@ public class MovieDataRepository {
             System.out.println(movie);
         }
     }
+     */
 }
