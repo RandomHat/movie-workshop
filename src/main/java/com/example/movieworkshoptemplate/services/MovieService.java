@@ -79,4 +79,40 @@ public class MovieService {
 
         return amount == count;
     }
+
+    public String longestByGenre(String g1, String g2){
+        List<Movie> movies = repo.getMovies();
+        String winner = "Aaaand the Winner is: ";
+        double g1Avg, g2Avg;
+        int g1Sum, g1Count, g2Sum, g2Count;
+        g1Sum = g1Count = g2Sum = g2Count = 0;
+
+        for (Movie mov : movies) {
+            if (mov.getSubject().toLowerCase(Locale.ROOT).equals(g1)){
+                g1Sum += mov.getLength();
+                g1Count++;
+            }
+            if (mov.getSubject().toLowerCase(Locale.ROOT).equals(g2)){
+                g2Sum += mov.getLength();
+                g2Count++;
+            }
+        }
+
+        g1Avg = (double) g1Sum/g1Count;
+        g2Avg = (double) g2Sum/g2Count;
+
+        String g1Res = String.format("the Genre " + g1 +" has and average length of: %.2f", g1Avg);
+        String g2Res = String.format("the Genre " + g2 +" has and average length of: %.2f", g2Avg);
+
+        if (g1Avg > g2Avg){
+            winner += g1;
+        } else if (g1Avg == g2Avg){
+            winner += "It's a TIE";
+        } else {
+            winner += g2;
+        }
+
+        return g1Res + "\n" + g2Res + "\n\n" + winner;
+    }
+
 }

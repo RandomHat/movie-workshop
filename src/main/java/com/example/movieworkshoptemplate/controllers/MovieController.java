@@ -42,6 +42,6 @@ public class MovieController {
 
     @GetMapping("/longest")
     public String filterLongestByGenre(@RequestParam String g1, String g2){
-        return "temp";
+        return movieService.longestByGenre(g1,g2);
     }
 }
