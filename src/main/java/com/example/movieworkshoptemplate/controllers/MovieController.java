@@ -32,7 +32,7 @@ public class MovieController {
 
     @GetMapping("/howManyWonAnAward")
     public String howManyWonAnAward(){
-        return "temp";
+        return movieService.wonAwards();
     }
 
     @GetMapping("/filter")

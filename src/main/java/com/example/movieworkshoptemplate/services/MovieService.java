@@ -41,4 +41,17 @@ public class MovieService {
         }
         return sortedMovies;
     }
+
+    public String wonAwards(){
+        List<Movie> movies = repo.getMovies();
+        int count = 0;
+
+        for (Movie mov: movies) {
+            if (mov.hasAwards()){
+                count++;
+            }
+        }
+
+        return Integer.toString(count);
+    }
 }
