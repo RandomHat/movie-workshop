@@ -33,7 +33,12 @@ public class MovieController {
     }
 
     @GetMapping("/filter")
-    public String filterBy(@RequestParam char letter, int amount){
+    public String filterLetterAmount(@RequestParam char letter, int amount){
+        return "temp";
+    }
+
+    @GetMapping("/longest")
+    public String filterLongestByGenre(@RequestParam String g1, String g2){
         return "temp";
     }
 
