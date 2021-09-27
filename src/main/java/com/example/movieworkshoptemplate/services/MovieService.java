@@ -54,4 +54,29 @@ public class MovieService {
 
         return Integer.toString(count);
     }
+
+    public String filterLetterAmount(char letter, int amount){
+        List<Movie> movies = repo.getMovies();
+        String filtered = "";
+
+        for (Movie mov : movies) {
+            if (countLetters(mov.getTitle(), letter, amount)) {
+                filtered = filtered.concat(mov.toString() + "\n");
+            }
+        }
+        return filtered;
+    }
+
+    public boolean countLetters(String string, char letter, int amount){
+        char[] arr = string.toCharArray();
+        int count = 0;
+
+        for (char ch : arr){
+            if (ch == letter){
+                count++;
+            }
+        }
+
+        return amount == count;
+    }
 }

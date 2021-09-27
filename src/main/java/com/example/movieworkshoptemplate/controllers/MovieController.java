@@ -36,8 +36,8 @@ public class MovieController {
     }
 
     @GetMapping("/filter")
-    public String filterLetterAmount(@RequestParam char letter, int amount){
-        return "temp";
+    public String filterLetterAmount(@RequestParam char type, int amount){
+        return movieService.filterLetterAmount(type, amount);
     }
 
     @GetMapping("/longest")
