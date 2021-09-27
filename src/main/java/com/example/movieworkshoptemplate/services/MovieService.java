@@ -88,11 +88,11 @@ public class MovieService {
         g1Sum = g1Count = g2Sum = g2Count = 0;
 
         for (Movie mov : movies) {
-            if (mov.getSubject().toLowerCase(Locale.ROOT).equals(g1)){
+            if (mov.getSubject().toLowerCase(Locale.ROOT).equals(g1.toLowerCase(Locale.ROOT))){
                 g1Sum += mov.getLength();
                 g1Count++;
             }
-            if (mov.getSubject().toLowerCase(Locale.ROOT).equals(g2)){
+            if (mov.getSubject().toLowerCase(Locale.ROOT).equals(g2.toLowerCase(Locale.ROOT))){
                 g2Sum += mov.getLength();
                 g2Count++;
             }
@@ -101,8 +101,10 @@ public class MovieService {
         g1Avg = (double) g1Sum/g1Count;
         g2Avg = (double) g2Sum/g2Count;
 
-        String g1Res = String.format("the Genre " + g1 +" has and average length of: %.2f", g1Avg);
-        String g2Res = String.format("the Genre " + g2 +" has and average length of: %.2f", g2Avg);
+        String g1Res = "the Genre " + g1 +" has and average length of: ";
+        g1Res += String.format("%.2f", g1Avg);
+        String g2Res = "the Genre " + g2 +" has and average length of: ";
+        g2Res += String.format("%.2f", g2Avg);
 
         if (g1Avg > g2Avg){
             winner += g1;
