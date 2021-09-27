@@ -27,7 +27,7 @@ public class MovieController {
 
     @GetMapping("/getTenSortByPopularity")
     public String getTenSortByPopularity(){
-        return "temp";
+        return movieService.getTenByPop();
     }
 
     @GetMapping("/howManyWonAnAward")
