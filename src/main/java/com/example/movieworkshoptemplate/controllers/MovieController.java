@@ -22,7 +22,7 @@ public class MovieController {
 
     @GetMapping("/getRandom")
     public String getRandom(){
-        return "temp";
+        return movieService.getRandom();
     }
 
     @GetMapping("/getTenSortByPopularity")
