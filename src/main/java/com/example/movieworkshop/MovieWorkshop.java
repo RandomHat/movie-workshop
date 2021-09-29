@@ -1,13 +1,13 @@
-package com.example.movieworkshoptemplate;
+package com.example.movieworkshop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MovieWorkshopTemplateApplication {
+public class MovieWorkshop {
 
     public static void main(String[] args) {
-        SpringApplication.run(MovieWorkshopTemplateApplication.class, args);
+        SpringApplication.run(MovieWorkshop.class, args);
     }
 
 }

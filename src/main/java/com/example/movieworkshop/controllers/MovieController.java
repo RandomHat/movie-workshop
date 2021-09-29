@@ -1,6 +1,6 @@
-package com.example.movieworkshoptemplate.controllers;
+package com.example.movieworkshop.controllers;
 
-import com.example.movieworkshoptemplate.services.MovieService;
+import com.example.movieworkshop.services.MovieService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

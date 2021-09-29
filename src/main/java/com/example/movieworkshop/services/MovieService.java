@@ -1,7 +1,7 @@
-package com.example.movieworkshoptemplate.services;
+package com.example.movieworkshop.services;
 
-import com.example.movieworkshoptemplate.models.Movie;
-import com.example.movieworkshoptemplate.repositories.MovieDataRepository;
+import com.example.movieworkshop.models.Movie;
+import com.example.movieworkshop.repositories.MovieDataRepository;
 
 import java.util.*;
 

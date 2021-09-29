@@ -1,4 +1,4 @@
-package com.example.movieworkshoptemplate.models;
+package com.example.movieworkshop.models;
 
 //Movie POJO
 public class Movie {

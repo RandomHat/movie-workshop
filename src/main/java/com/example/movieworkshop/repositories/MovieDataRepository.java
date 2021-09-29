@@ -1,6 +1,6 @@
-package com.example.movieworkshoptemplate.repositories;
+package com.example.movieworkshop.repositories;
 
-import com.example.movieworkshoptemplate.models.Movie;
+import com.example.movieworkshop.models.Movie;
 
 import java.io.File;
 import java.io.FileNotFoundException;
