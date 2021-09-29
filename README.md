@@ -41,9 +41,9 @@ execute the newly compiled .jar file
 java -cp target/movie-workshop-0.0.1-SNAPSHOT.jar com.example.movieworkshop.MovieWorkshop
 ```
 
-## Using <project_name>
+## Using Movie-Workshop 
 
-To use <project_name>, follow these steps:
+To use Movie-Workshop, follow these steps:
 
 Start the application by following the instructions under installation.
 
