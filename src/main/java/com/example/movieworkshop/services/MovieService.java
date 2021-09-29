@@ -33,11 +33,11 @@ public class MovieService {
             }
         };
 
-        Collections.sort(movies, byLength);
+        movies.sort(byLength);
 
         //Take the first 10 movies in the sorted array and make a string.
         for (int i = 0; i<10; i++){
-            sortedMovies = sortedMovies.concat(movies.get(i).toString() + "\n");
+            sortedMovies = sortedMovies.concat(movies.get(i).toString() + "<br>");
         }
         return sortedMovies;
     }
@@ -52,7 +52,7 @@ public class MovieService {
             }
         }
 
-        return Integer.toString(count);
+        return "Number of movies that has won an award: " + count;
     }
 
     public String filterLetterAmount(char letter, int amount){
@@ -61,7 +61,7 @@ public class MovieService {
 
         for (Movie mov : movies) {
             if (countLetters(mov.getTitle(), letter, amount)) {
-                filtered = filtered.concat(mov.toString() + "\n");
+                filtered = filtered.concat(mov.toString() + "<br>");
             }
         }
         return filtered;
@@ -114,7 +114,7 @@ public class MovieService {
             winner += g2;
         }
 
-        return g1Res + "\n" + g2Res + "\n\n" + winner;
+        return g1Res + "<br>" + g2Res + "<br><br>" + winner;
     }
 
 }
