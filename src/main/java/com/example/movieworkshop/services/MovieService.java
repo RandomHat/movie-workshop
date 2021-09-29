@@ -21,7 +21,7 @@ public class MovieService {
     }
 
     public String getTenByPop(){
-        List<Movie> movies = repo.getMovies();
+        List<Movie> movies = new ArrayList<>(repo.getMovies());
         String sortedMovies = "";
         // Wanted to do the sort using Collections, but implementing Comparable seemed wrong since we're going to want to compare multiple different fields.
         // This is an Anonymous Inner Class? that implements the comparator interface and overides the compare method.

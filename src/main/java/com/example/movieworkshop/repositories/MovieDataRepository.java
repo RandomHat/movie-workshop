@@ -55,7 +55,6 @@ public class MovieDataRepository {
         // Initialize and return object
         return new Movie(year, length, title, subject, popularity, awards);
     }
-
     /*
     TestKode til klassen
 
