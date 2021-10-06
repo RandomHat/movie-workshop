@@ -46,12 +46,12 @@ public class MovieController {
     }
 
     @GetMapping("/filter")
-    public String filterLetterAmount(@RequestParam char type, int amount){
+    public String filterLetterAmount(@RequestParam(defaultValue = "a") char type, @RequestParam(defaultValue = "2") int amount){
         return movieService.filterLetterAmount(type, amount);
     }
 
     @GetMapping("/longest")
-    public String filterLongestByGenre(@RequestParam String g1, String g2){
+    public String filterLongestByGenre(@RequestParam(defaultValue = "drama") String g1, @RequestParam(defaultValue = "action") String g2){
         return movieService.longestByGenre(g1,g2);
     }
 }
